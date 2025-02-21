@@ -66,7 +66,7 @@ train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, nu
 val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
 
-# Create ViT model - using the original dataset's classes
+# Create resnet18 model - using the original dataset's classes
 model = create_model('resnet18', pretrained=True, num_classes=101)
 model = model.to(device)
 
