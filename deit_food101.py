@@ -75,7 +75,7 @@ train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, nu
 val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
 
-# Create ViT model - using the original dataset's classes
+# Create DeiT model - using the original dataset's classes
 model = create_model('deit_base_patch16_224', pretrained=True, num_classes=101)
 model = model.to(device)
 total_params = sum(p.numel() for p in model.parameters())
