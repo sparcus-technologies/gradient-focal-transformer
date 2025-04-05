@@ -114,7 +114,7 @@ batch_size = 32
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
 val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
 
-# Create ViT model - COCO has 80 classes
+# Create DeiT model - COCO has 80 classes
 model = create_model('deit_base_patch16_224', pretrained=True, num_classes=80)
 model = model.to(device)
 
