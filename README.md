@@ -103,5 +103,4 @@ The repository has been actively maintained with recent updates to several model
 
 ## Acknowledgements
 The model implementations are based on research from various papers and repositories.
-"""
 
