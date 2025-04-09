@@ -96,9 +96,10 @@ The repository has been actively maintained with recent updates to several model
 
 ## Contributions
 * Kriuk Boris, Hong Kong University of Science and Technology
-* Amir Fakhrutdinov, Shanghai Jiao Tong university
-* Shoaib Aslam, Hong Kong University of Science and Technology
 * Simranjit Kaur Gill, University of Westminster
+* Shoaib Aslam, University of Engineering and Technology Lahore Pakistan
+* Fakhrutdinov Amir, Shanghai Jiao Tong University
+
 
 
 ## Acknowledgements
