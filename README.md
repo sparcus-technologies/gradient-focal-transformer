@@ -1,6 +1,8 @@
 # Gradient Focal Transformer
 ## Abstract 
 
+Fine-Grained Image Classification (FGIC) remains a complex task in computer vision, as it requires models to distinguish between categories with subtle localized visual differences. Well-studied CNN-based models, while strong in local feature extraction, often fail to capture the global context required for fine-grained recognition, while more recent ViT-backboned models address FGIC with attention-driven mechanisms but lack the ability to adaptively focus on truly discriminative regions. TransFG and other ViT-based extensions introduced part-aware token selection to enhance attention localization, yet they still struggle with computational efficiency, attention region selection flexibility, and detail-focus narrative in complex environments. This paper introduces GFT (Gradient Focal Transformer), a new ViT-derived framework created for FGIC tasks. GFT integrates the Gradient Attention Learning Alignment (GALA) mechanism to dynamically prioritize class-discriminative features by analyzing attention gradient flow. Coupled with a Progressive Patch Selection (PPS) strategy, the model progressively filters out less informative regions, reducing computational overhead while enhancing sensitivity to fine details. GFT achieves SOTA accuracy on FGVC Aircraft, Food-101, and COCO datasets with 93M parameters, outperforming ViT-based advanced FGIC models in efficiency. By bridging global context and localized detail extraction, GFT sets a new benchmark in fine-grained recognition, offering interpretable solutions for real-world deployment scenarios. 
+
 ## Overview
 
 This repository contains a comprehensive collection of deep learning models used as code accompaniment for GFT research work, evaluated across three popular datasets:
@@ -61,47 +63,12 @@ Each model implementation is provided as a standalone Python file.
 - torchvision
 - Other dependencies based on specific model requirements
 
-### Usage Example
-
-```python
-# For using DeiT with COCO dataset
-from deit_coco import DeiTCOCO
-
-# Initialize the model
-model = DeiTCOCO(pretrained=True)
-
-# Process an image
-import torch
-from PIL import Image
-from torchvision import transforms
-
-transform = transforms.Compose([
-    transforms.Resize(256),
-    transforms.CenterCrop(224),
-    transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-])
-
-img = Image.open('path_to_image.jpg')
-img_tensor = transform(img).unsqueeze(0)
-
-# Get predictions
-with torch.no_grad():
-    predictions = model(img_tensor)
-
-```
-
 ## Recent Updates
-The repository has been actively maintained with recent updates to several models:
+The repository has been actively maintained.
 
 ## Contributions
 * Kriuk Boris, Hong Kong University of Science and Technology
 * Simranjit Kaur Gill, University of Westminster
 * Shoaib Aslam, University of Engineering and Technology Lahore Pakistan
 * Fakhrutdinov Amir, Shanghai Jiao Tong University
-
-
-
-## Acknowledgements
-The model implementations are based on research from various papers and repositories.
 
